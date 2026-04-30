@@ -5,7 +5,7 @@
   "main": "index.mjs",
   "scripts": {
    "dev": "node --watch index.mjs",
-  "start": "node index.mjs"
+   "start": "node index.mjs"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/mbordon1/escueladedanzascrear/issues"
   },

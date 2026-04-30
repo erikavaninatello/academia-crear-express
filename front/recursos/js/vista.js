@@ -5,7 +5,7 @@ const botones = document.querySelectorAll('.btn-filtro');
 
 async function cargarDatos() {
   try {
-    const respuesta = await fetch('./recursos/js/clases.json');
+    const respuesta = await fetch('https://69cbcb910b417a19e07b4341.mockapi.io/api/v1/academia');
 
     if (!respuesta.ok) {
       throw new Error("No se pudo cargar el archivo JSON");
