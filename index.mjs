@@ -1,13 +1,17 @@
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const PUERTO = 3000;
 
+const nombreArchivo = fileURLToPath(import.meta.url);
+const url = path.dirname(nombreArchivo);
+
 // middleware JSON
 app.use(express.json());
 
-// 🔥 SERVIDOR ESTÁTICO (IMPORTANTE)
-app.use(express.static('.'));
+app.use(express.static(url + '/front'));
 
 // middleware de prueba
 app.use((req, res, next) => {
@@ -16,7 +20,7 @@ app.use((req, res, next) => {
 });
 
 // POST contacto
-app.post('/contacto', (req, res) => {
+app.post('/', (req, res) => {
 
     console.log(req.body);
 
