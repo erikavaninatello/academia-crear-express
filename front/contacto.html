@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./recursos/imagenes/logo.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="./recursos/css/estilos.css" />
+    <title>Escuela de Danzas CREAR | Contacto</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./recursos/imagenes/logo.webp" alt="Logo de CREAR" />
+        </a>
+        <nav class="menu" role="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="clases.html">Clases</a>
+            <a href="https://www.google.com/maps?rlz=1C5CHFA_enAR1142AR1142&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPNIBCTI1OTQ3ajBqN6gCALACAA&um=1&ie=UTF-8&fb=1&gl=ar&sa=X&geocode=KYVsDIbmozKUMX0Xw2RcKIuJ&daddr=Baltazar+Pardo+de+Figueroa+962,+X5000CFJ+X5000CFJ,+Córdoba" target="_blank">
+            Ubicación </a>
+            <a href="contacto.html" class="activo">Contacto</a>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+    </header>
+    <main>
+        <section class="contacto fade-in">
+            <img src="./recursos/imagenes/portada_contacto.webp" alt="Grupo de alumnos en CREAR">
+
+            <h2>Formulario de contacto</h2>
+            <p>Podés visitarnos en nuestra sede o enviarnos un mensaje mediante el formulario.</p>
+
+            <form action="/contacto" method="post">
+                <label for="id-name">Nombre completo</label>
+                <input type="text" id="id-name" name="name" placeholder="Nombre completo" required>
+
+                <label for="id-email">Correo electrónico</label>
+                <input type="email" id="id-email" name="email" placeholder="Ejemplo: tu@email.com" required>
+
+                <label for="id-tel">Teléfono</label>
+                <input type="tel" id="id-tel" name="telefono" placeholder="Ejemplo: 351-5555555" required>
+
+                <label for="id-clases">Clase de interés</label>
+                <select id="id-clases" name="clases" required>
+                    <option value="">Seleccione una clase</option>
+                    <option value="Iniciación a la Danza">Iniciación a la Danza</option>
+                    <option value="Ritmos Latinos y Urbanos">Ritmos Latinos y Urbanos</option>
+                    <option value="Profesorado Danza Clásica">Profesorado Danza Clásica</option>
+                    <option value="Profesorado Danza Jazz">Profesorado Danza Jazz</option>
+                    <option value="Profesorado Danza Española">Profesorado Danza Española</option>
+                    <option value="Profesorado de Tap">Profesorado de Tap</option>
+                </select>
+
+                <label for="id-mensaje">Mensaje</label>
+                <textarea id="id-mensaje" name="mensaje" placeholder="Contanos qué te gustaría aprender..."
+                    required></textarea>
+
+                <button type="submit" id="btnEnviar">Enviar mensaje</button>
+            </form>
+        </section>
+
+        <h2 class="titulo-mapa">
+            <span class="icono-mapa">📍</span>
+            Nuestra ubicación
+        </h2>
+
+        <figure class="mapa-contenedor">
+            <iframe
+            loading="lazy"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5677892567364!2d-64.20442832365279!3d-31.426032196719024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a3e6860c6c85%3A0x898b285c64c3177d!2sCREAR%20-%20Escuela%20de%20Danzas!5e0!3m2!1ses-419!2sar!4v1760546280164!5m2!1ses-419!2sar">
+            </iframe>
+        </figure>
+
+        <div class="whatsapp-fijo">
+            <a href="https://api.whatsapp.com/send/?phone=5493512587281&text=Hola!%20Quisiera%20más%20información%20sobre%20las%20clases"
+                target="_blank" aria-label="Abrir WhatsApp">
+                <img src="./recursos/imagenes/whatsapp.svg" alt="Vínculo a WhatsApp">
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer-crear">
+        <div class="footer-redes">
+            <a href="https://www.instagram.com/escueladedanzascrear/" target="_blank" aria-label="Instagram">
+                <img src="./recursos/imagenes/instagram.webp" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com/escueladedanzascrear" target="_blank" aria-label="Facebook">
+                <img src="./recursos/imagenes/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.youtube.com/@EscuelaDeDanzasCREAR" target="_blank" aria-label="YouTube">
+                <img src="./recursos/imagenes/youtube.svg" alt="YouTube" />
+            </a>
+        </div>
+        <p class="footer-nombre">Escuela de Danzas CREAR</p>
+        <p id="footer-texto">© <span id="anio"></span> Todos los derechos reservados</p>
+    </footer>
+
+    <div class="scrollBar"></div>
+
+    <button id="btnScroll" aria-label="Scroll button">
+    <svg id="iconScroll" width="22" height="22" fill="currentColor">
+    <path d="M12 16l-6-6h12z"></path>
+  </svg>
+  </button>
+
+    <script src="./recursos/js/menu.js"></script>
+    <script src="./recursos/js/animaciones.js"></script>
+</body>
+
+</html>

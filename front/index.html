@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./recursos/imagenes/logo.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="/recursos/css/estilos.css" />
+    <title>Escuela de Danzas CREAR | Inicio</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./recursos/imagenes/logo.webp" alt="Logo de CREAR" />
+        </a>
+        <nav class="menu" role="navigation">
+            <a href="index.html" class="activo">Inicio</a>
+            <a href="clases.html">Clases</a>
+            <a href="https://www.google.com/maps?rlz=1C5CHFA_enAR1142AR1142&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPNIBCTI1OTQ3ajBqN6gCALACAA&um=1&ie=UTF-8&fb=1&gl=ar&sa=X&geocode=KYVsDIbmozKUMX0Xw2RcKIuJ&daddr=Baltazar+Pardo+de+Figueroa+962,+X5000CFJ+X5000CFJ,+Córdoba" target="_blank">
+             Ubicación </a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+    </header>
+    <main>
+        <section class="inicio fade-in">
+            <img src="./recursos/imagenes/portada_inicio.webp" alt="Grupo completo de alumnos de CREAR">
+            <h1>Escuela de Danzas CREAR</h1>
+            <p>
+                ¡Descubrí tu pasión por la danza!
+
+                En CREAR acompañamos a cada alumno en su recorrido artístico, desde los primeros pasos
+                hasta la formación profesional.
+            </p>
+
+            <a href="contacto.html" class="btn">Inscribite ahora</a>
+        </section>
+
+        <section class="historia fade-in">
+            <h2>Nuestra Historia</h2>
+            <div class="historia-contenido">
+                <img src="./recursos/imagenes/historia_crear.webp" alt="Fundadora y alumnas de CREAR">
+                <div class="texto">
+                    <p>
+                        Desde hace más de 25 años, la <strong>Escuela de Danzas CREAR</strong> forma artistas
+                        integrales,
+                        acompañando el crecimiento de cada alumno con pasión, disciplina y creatividad.
+                        Nació como un pequeño espacio de expresión y hoy es una comunidad de cientos de alumnos que
+                        comparten el amor por la danza.
+                    </p>
+                    <p>
+                        A lo largo de los años, hemos participado en festivales, competencias y muestras, siempre
+                        priorizando
+                        el trabajo en equipo, la formación artística y la felicidad de bailar.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria fade-in">
+            <h2>Galería</h2>
+            <h3>Momentos especiales de nuestras clases y presentaciones</h3>
+
+            <div class="grid">
+                <article>
+                    <h3>Danza clásica</h3>
+                    <img src="./recursos/imagenes/medianas_galeria.webp" alt="Alumnas de danza clásica">
+                    <img src="./recursos/imagenes/medianas2_galeria.webp" alt="Presentación de danza clásica">
+                    <p>Elegancia y técnica</p>
+                </article>
+
+                <article>
+                    <h3>Presentaciones</h3>
+                    <img src="./recursos/imagenes/clasico_galeria.webp" alt="Alumnas en escenario">
+                    <img src="./recursos/imagenes/clasico2_galeria.webp" alt="Grupo de alumnas en función">
+                    <p>Momentos especiales</p>
+                </article>
+
+                <article>
+                    <h3>Iniciación a la danza</h3>
+                    <img src="./recursos/imagenes/babys_galeria.webp" alt="Alumnas pequeñas">
+                    <img src="./recursos/imagenes/babys2_galeria.webp" alt="Grupo inicial de danza">
+                    <p>Primeros pasos en la danza</p>
+                </article>
+            </div>
+        </section>
+        <div class="whatsapp-fijo">
+            <a href="https://api.whatsapp.com/send/?phone=5493512587281&text=Hola!%20Quisiera%20más%20información%20sobre%20las%20clases"
+                target="_blank" aria-label="Abrir WhatsApp">
+                <img src="./recursos/imagenes/whatsapp.svg" alt="Vínculo a WhatsApp">
+            </a>
+        </div>
+    </main>
+    <footer class="footer-crear">
+        <div class="footer-redes">
+            <a href="https://www.instagram.com/escueladedanzascrear/" target="_blank" aria-label="Instagram">
+                <img src="./recursos/imagenes/instagram.webp" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com/escueladedanzascrear" target="_blank" aria-label="Facebook">
+                <img src="./recursos/imagenes/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.youtube.com/@EscuelaDeDanzasCREAR" target="_blank" aria-label="YouTube">
+                <img src="./recursos/imagenes/youtube.svg" alt="YouTube" />
+            </a>
+        </div>
+
+        <p class="footer-nombre">Escuela de Danzas CREAR</p>
+        <p id="footer-texto">© <span id="anio"></span> Todos los derechos reservados</p>
+    </footer>
+   
+
+   <div class="scrollBar"></div>
+
+  <button id="btnScroll" aria-label="Scroll button">
+    <svg id="iconScroll" width="22" height="22" fill="currentColor">
+    <path d="M12 16l-6-6h12z"></path>
+  </svg>
+  </button>
+
+  <div id="modalImagen" class="modal-img">
+  <span class="cerrar-img">&times;</span>
+  <img id="imgAmpliada" src="" alt="Imagen ampliada">
+    </div>
+    
+    <script src="./recursos/js/galeria.js"></script>
+    <script src="./recursos/js/menu.js"></script>
+    <script src="./recursos/js/animaciones.js"></script>
+</body>
+
+</html>

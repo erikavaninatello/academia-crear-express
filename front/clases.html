@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="./recursos/imagenes/logo.webp" type="image/x-icon">
+  <link rel="stylesheet" href="./recursos/css/estilos.css">
+
+  <title>Escuela de Danzas CREAR | Clases</title>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="./recursos/imagenes/logo.webp" alt="Logo de CREAR">
+    </a>
+
+    <nav class="menu" role="navigation">
+      <a href="index.html">Inicio</a>
+      <a href="clases.html" class="activo">Clases</a>
+      <a href="https://www.google.com/maps?rlz=1C5CHFA_enAR1142AR1142&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPNIBCTI1OTQ3ajBqN6gCALACAA&um=1&ie=UTF-8&fb=1&gl=ar&sa=X&geocode=KYVsDIbmozKUMX0Xw2RcKIuJ&daddr=Baltazar+Pardo+de+Figueroa+962,+X5000CFJ+X5000CFJ,+Córdoba" target="_blank">
+        Ubicación </a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+  </header>
+
+  <main>
+    <section class="clases fade-in">
+      <img src="./recursos/imagenes/portada_clases.webp" alt="Alumnas durante una presentación" class="imagen-portada">
+
+      <h2>Nuestras Clases</h2>
+      <h3>Explorá todas las propuestas que tenemos para vos</h3>
+
+      <search class="filtros">
+        <button class="btn-filtro activo" data-nivel="Todos">Todas</button>
+        <button class="btn-filtro" data-nivel="Inicial">Inicial</button>
+        <button class="btn-filtro" data-nivel="Intermedio">Intermedio</button>
+        <button class="btn-filtro" data-nivel="Avanzado">Avanzado</button>
+      </search>
+
+      <section id="contenedor"></section>
+
+    </section>
+  </main>
+
+  <footer class="footer-crear">
+    <div class="footer-redes">
+      <a href="https://www.instagram.com/escueladedanzascrear/" target="_blank">
+        <img src="./recursos/imagenes/instagram.webp" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/escueladedanzascrear" target="_blank">
+        <img src="./recursos/imagenes/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.youtube.com/@EscuelaDeDanzasCREAR" target="_blank">
+        <img src="./recursos/imagenes/youtube.svg" alt="YouTube">
+      </a>
+    </div>
+
+    <p class="footer-nombre">Escuela de Danzas CREAR</p>
+    <p id="footer-texto">© <span id="anio"></span> Todos los derechos reservados</p>
+  </footer>
+
+  <div class="scrollBar"></div>
+
+  <button id="btnScroll" aria-label="Scroll button">
+    <svg id="iconScroll" width="22" height="22" fill="currentColor">
+    <path d="M12 16l-6-6h12z"></path>
+  </svg>
+  </button>
+
+
+  <script src="./recursos/js/menu.js"></script>
+  <script src="./recursos/js/animaciones.js"></script>
+  <script type="module" src="./recursos/js/vista.js"></script>
+
+</body>
+
+</html>

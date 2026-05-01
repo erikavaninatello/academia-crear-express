@@ -1,0 +1,25 @@
+{
+  "name": "escueladedanzascrear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+   "dev": "node --watch index.mjs",
+   "start": "node index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbordon1/escueladedanzascrear.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mbordon1/escueladedanzascrear/issues"
+  },
+  "homepage": "https://github.com/mbordon1/escueladedanzascrear#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
