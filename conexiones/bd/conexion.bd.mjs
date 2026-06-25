@@ -9,4 +9,12 @@ const pool = new pg.Pool({
   port:     Number(process.env.DB_PORT) || 5433,
 })
 
+pool.connect((err) => {
+  if (err) {
+    console.error('ERROR conexión BD:', err.message)
+  } else {
+    console.log('BD conectada correctamente')
+  }
+})
+
 export default pool

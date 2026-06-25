@@ -2,6 +2,7 @@ import { Router } from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import multer from 'multer'
+import { verificarSesion } from '../autenticacion/middleware.autenticacion.mjs'
 import {
   obtenerClases,
   obtenerClasesPorNivel,
@@ -135,7 +136,7 @@ router.get('/:id', obtenerClasePorId)
  *         description: Error interno del servidor
  */
 // upload.single('imagen') intercepta el archivo antes de que llegue al controlador
-router.post('/', subida.single('imagen'), crearClase)
+router.post('/',verificarSesion, subida.single('imagen'), crearClase)
 
 /**
  * @swagger
@@ -175,7 +176,7 @@ router.post('/', subida.single('imagen'), crearClase)
  *         description: Error interno del servidor
  */
 // upload.single('imagen') intercepta el archivo antes de que llegue al controlador
-router.put('/:id', subida.single('imagen'), actualizarClase)
+router.put('/:id', verificarSesion,subida.single('imagen'), actualizarClase)
 
 /**
  * @swagger
@@ -198,6 +199,6 @@ router.put('/:id', subida.single('imagen'), actualizarClase)
  *       '500':
  *         description: Error interno del servidor
  */
-router.delete('/:id', eliminarClase)
+router.delete('/:id',verificarSesion, eliminarClase)
 
 export default router

@@ -1,21 +1,29 @@
-// Middleware guardián: verifica que haya sesión válida antes de dejar pasar
+import jwt from 'jsonwebtoken'
+import 'dotenv/config'
 
 export function verificarSesion(req, res, next) {
+  const token = req.signedCookies['token']
 
-  // signedCookies viene de cookie-parser
-  // si la cookie fue manipulada, devuelve false automáticamente
-  const sesion = req.signedCookies['sesion']
-
-  if (sesion === 'identificador') {
-    return next() // sesión válida, seguimos
+  if (!token) {
+    const esApi = req.originalUrl.startsWith('/api/')
+    if (esApi) return res.status(401).json({ error: 'No autorizado' })
+    return res.redirect('/login')
   }
 
-  // Sin sesión: si es llamada de API respondemos 401, si es navegador redirigimos
-  const esApi = req.path.startsWith('/api/')
+  jwt.verify(token, process.env.JWT_FIRMA, (error, decoded) => {
+    if (error) {
+      const esApi = req.originalUrl.startsWith('/api/')
+      if (esApi) return res.status(401).json({ error: 'Token inválido o expirado' })
 
-  if (esApi) {
-    return res.status(401).json({ error: 'No autorizado' })
-  }
+      // Si el token expiró, avisamos al login con parámetro
+      if (error.name === 'TokenExpiredError') {
+        return res.redirect('/login?expired=1')
+      }
 
-  return res.redirect('/login')
+      return res.redirect('/login')
+    }
+
+    req.usuario = decoded
+    next()
+  })
 }

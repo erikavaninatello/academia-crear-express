@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "Iniciación a la Danza (2 a 6 años)",
+    "descripcion": "Primeros pasos en la danza con juegos y exploración de movimiento.",
+    "nivel": "Inicial",
+    "horarios": ["Martes y Jueves - 18:00 a 19:00"],
+    "imagen": "./recursos/imagenes/babys_clases.webp"
+  },
+  {
+    "id": 2,
+    "nombre": "Iniciación a la Danza (7 a 10 años)",
+    "descripcion": "Profundización en técnica clásica y jazz, combinando creatividad con disciplina corporal.",
+    "nivel": "Intermedio",
+    "horarios": ["Martes y Jueves - 19:00 a 20:00"],
+    "imagen": "./recursos/imagenes/medianas1_clases.webp"
+  },
+  {
+    "id": 3,
+    "nombre": "Danza Clásica",
+    "descripcion": "Formación técnica con trabajo en barra, puntas y creación coreográfica.",
+    "nivel": "Avanzado",
+    "horarios": ["Lunes 19:00 a 20:00", "Miércoles 17:00 a 18:00"],
+    "imagen": "./recursos/imagenes/clasico_clases.webp"
+  },
+  {
+    "id": 4,
+    "nombre": "Danza Jazz",
+    "descripcion": "Entrenamiento expresivo y energético que fusiona técnica, ritmo y creatividad.",
+    "nivel": "Avanzado",
+    "horarios": ["Miércoles 18:00 a 19:00", "Miércoles 19:00 a 20:00"],
+    "imagen": "./recursos/imagenes/jazz_clases.webp"
+  },
+  {
+    "id": 5,
+    "nombre": "Danza Española",
+    "descripcion": "Uso de castañuelas, mantón y abanico. Se trabaja fuerza, presencia y ritmo.",
+    "nivel": "Avanzado",
+    "horarios": ["Lunes 18:00 a 19:00"],
+    "imagen": "./recursos/imagenes/español_clases.webp"
+  },
+  {
+    "id": 7,
+    "nombre": "Tap (Zapateo Americano)",
+    "descripcion": "Técnica rítmica que combina música y movimiento con el sonido del zapateo.",
+    "nivel": "Avanzado",
+    "horarios": ["Lunes 17:00 a 18:00"],
+    "imagen": "./recursos/imagenes/tap_clases.webp"
+  },
+  {
+    "id": 8,
+    "nombre": "Ritmos Urbanos y Latinos (Inicial)",
+    "descripcion": "Un espacio pensado para quienes dan sus primeros pasos en los ritmos urbanos y latinos.A través del juego, la coordinación y el ritmo, los alumnos aprenden las bases del hip hop, reggaetón y salsa, descubriendo el movimiento desde la energía y la diversión. El objetivo es fortalecer la confianza y la expresión corporal mientras se disfruta de la música y el baile en grupo.",
+    "nivel": "Inicial",
+    "horarios": ["Martes y Jueves 20:00 a 21:00"],
+    "imagen": "./recursos/imagenes/hiphop_clases.webp"
+  },
+  {
+    "id": 9,
+    "nombre": "Ritmos Urbanos y Latinos (Intermedio)",
+    "descripcion": "Una propuesta para quienes ya tienen experiencia y buscan seguir evolucionando en distintos estilos urbanos y latinos. Se trabaja sobre técnica, precisión rítmica y composición coreográfica, explorando estilos como hip hop, comercial pop, bachata y salsa. El foco está en la interpretación, la musicalidad y la proyección escénica, potenciando la expresión artística individual y grupal.",
+    "nivel": "Intermedio",
+    "horarios": ["Lunes y Miércoles 20:00 a 21:00"],
+    "imagen": "./recursos/imagenes/latino_clases.webp"
+  }
+]

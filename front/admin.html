@@ -11,8 +11,9 @@
 <body>
 
   <header>
-    <h1>Panel de Administracion — Escuela de Danzas CREAR</h1>
+     <h1>Panel de Administracion — Escuela de Danzas CREAR</h1>
     <a href="/">← Volver al sitio</a>
+    <a href="/cerrar-sesion">Cerrar sesión</a>
   </header>
 
   <main>
@@ -78,7 +79,13 @@
 
   </main>
 
-  <script src="./recursos/js/admin.js"></script>
+  <script
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('expired') === '1') {
+      alert('Tu sesión expiró. Por favor ingresá nuevamente.')
+    }
+    src="./recursos/js/admin.js">
+  </script>
 
 </body>
 
