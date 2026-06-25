@@ -45,13 +45,11 @@ cd academia-crear-express
 ### 2. Instalar dependencias
 pnpm install
 
-
-### 3. Configurar las variables de entorno
-```bash
-cp .env.example .env
-```
-
-Completa el archivo `.env` con tus valores locales.
+## Configuración
+1. cp .env.example .env
+2. Completar DB_* con tus credenciales locales de Postgres
+3. Generar ADMIN_CLAVE: node -e "console.log(require('bcryptjs').hashSync('tu_clave', 10))"
+4. Definir COOKIE_SECRETO y JWT_FIRMA con cualquier string largo propio
 
 ### 4. Levantar la base de datos con Docker
 El contenedor toma la configuracion desde el archivo local `.env`:
@@ -73,7 +71,6 @@ docker start crear-postgres
 ```bash
 pnpm run dev
 ```
-
 
 Documentación de la API (Swagger):
 http://localhost:2026/api-docs
